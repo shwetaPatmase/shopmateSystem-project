@@ -1,3 +1,12 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Page register</title>
+</head>
+<body>
 <%@ include file="header.jsp" %>
 
 <div class="main-content">
@@ -6,15 +15,15 @@
 
 <h2>Create Account</h2>
 
-<form action="/registerUser" method="post">
+<form action="/add-Customer" method="post">
 
-<input type="text" name="fullname" placeholder="Full Name">
+<input type="text" name="fullName" placeholder="Full Name">
 
 <input type="email" name="email" placeholder="Email">
 
-<input type="text" name="mobile" placeholder="Mobile Number">
+<input type="text" name="mobileNo" placeholder="Mobile Number">
 
-<input type="text" name="username" placeholder="Username">
+<input type="text" name="userName" placeholder="Username">
 
 <input type="password" name="password" placeholder="Password">
 
@@ -29,3 +38,5 @@
 </div>
 
 <%@ include file="footer.jsp" %>
+</body>
+</html>

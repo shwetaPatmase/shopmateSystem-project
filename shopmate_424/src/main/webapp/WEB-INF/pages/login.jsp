@@ -1,3 +1,12 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>login page</title>
+</head>
+<body>
 <%@ include file="header.jsp" %>
 
 <div class="main-content">
@@ -6,9 +15,12 @@
 
 <h2>Login</h2>
 
-<form action="/loginUser" method="post">
+<form action="/verify-login" method="post">
+<p style="color:red">${msg}</p>
 
-<input type="text" name="username" placeholder="Username">
+</script>
+
+<input type="text" name="userName" placeholder="Username">
 
 <input type="password" name="password" placeholder="Password">
 
@@ -23,3 +35,5 @@
 </div>
 
 <%@ include file="footer.jsp" %>
+</body>
+</html>

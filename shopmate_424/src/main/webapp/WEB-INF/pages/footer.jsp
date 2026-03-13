@@ -1,3 +1,4 @@
+
 <footer class="footer">
 
 <h3>ShopMate</h3>

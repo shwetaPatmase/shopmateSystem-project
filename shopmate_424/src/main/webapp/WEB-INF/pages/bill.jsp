@@ -1,3 +1,12 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<titleBill</title>
+</head>
+<body>
 <%@ include file="header.jsp" %>
 
 <h2 class="page-title">Billing</h2>
@@ -11,3 +20,5 @@
 </div>
 
 <%@ include file="footer.jsp" %>
+</body>
+</html>

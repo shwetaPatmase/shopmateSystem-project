@@ -1,0 +1,13 @@
+package com.tka.dao;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
+import com.tka.model.Customer;
+
+@Repository
+public interface CustomerDao extends JpaRepository<Customer, Integer>{
+
+	    Customer findByUserNameAndPassword(String userName, String password);
+
+	}
