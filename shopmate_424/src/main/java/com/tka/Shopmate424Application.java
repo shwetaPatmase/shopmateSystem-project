@@ -8,7 +8,7 @@ public class Shopmate424Application {
 
 	public static void main(String[] args) {
 		SpringApplication.run(Shopmate424Application.class, args);
-		System.err.println("Shopmate424Application started....");
+		System.err.println("Shopmate424Application started.....");
 	}
 
 }
