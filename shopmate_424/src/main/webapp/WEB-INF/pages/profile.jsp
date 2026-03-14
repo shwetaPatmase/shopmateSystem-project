@@ -1,12 +1,20 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+pageEncoding="UTF-8"%>
+
 <!DOCTYPE html>
 <html>
 <head>
+
 <meta charset="UTF-8">
-<title>profile</title>
+
+<title>Profile</title>
+
+<link rel="stylesheet" href="/css/style.css">
+
 </head>
+
 <body>
+
 <%@ include file="header.jsp" %>
 
 <div class="main-content">
@@ -22,10 +30,21 @@
 <p>Full Name : ${customer.fullName}</p>
 <p>Mobile : ${customer.mobileNo}</p>
 
+<hr class="profile-line">
+
+<div class="profile-actions">
+
+<a href="/products" class="view-products-btn">
+🛒 Explore Products
+</a>
+
+</div>
+
 </div>
 
 </div>
 
 <%@ include file="footer.jsp" %>
+
 </body>
 </html>

@@ -1,8 +1,10 @@
 package com.tka.dao;
 
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
 import com.tka.model.Bill;
 
-public interface BillDao extends JpaRepository<Bill,Integer>{
+@Repository
+public interface BillDao extends JpaRepository<Bill, Integer>{
 
 }

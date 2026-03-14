@@ -310,6 +310,42 @@ margin-bottom:5px;
 background:#f5f8ff;
 transition:0.3s;
 }
+
+/* PROFILE LINE */
+
+/* VIEW PRODUCTS BUTTON */
+
+.view-products-btn{
+display:inline-block;
+margin-top:20px;
+padding:14px 35px;
+font-size:16px;
+font-weight:600;
+color:white;
+text-decoration:none;
+border-radius:30px;
+
+background:linear-gradient(135deg,#007bff,#00c6ff);
+
+box-shadow:0 8px 18px rgba(0,0,0,0.2);
+transition:all 0.3s ease;
+position:relative;
+overflow:hidden;
+}
+
+/* HOVER EFFECT */
+
+.view-products-btn:hover{
+transform:translateY(-3px) scale(1.05);
+box-shadow:0 12px 25px rgba(0,0,0,0.3);
+background:linear-gradient(135deg,#0056d2,#0096c7);
+}
+
+/* CLICK EFFECT */
+
+.view-products-btn:active{
+transform:scale(0.95);
+}
 /* HEADER */
 
 .cart-table th{
