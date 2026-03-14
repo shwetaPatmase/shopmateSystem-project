@@ -20,8 +20,11 @@ public class Customer {
     String userName;
     String password;
 
-    @OneToMany(mappedBy = "customer")
+    @OneToMany(mappedBy="customer")
     List<Cart> cartItems;
+
+    @OneToMany(mappedBy="customer")
+    List<Bill> bills;
 
     public Customer(){}
 

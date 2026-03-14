@@ -22,4 +22,8 @@ public class CartService {
         cartDao.save(cart);
     }
 
+    public List<Cart> getProductsByIds(List<Integer> ids){
+        return cartDao.findAllById(ids);
+    }
+
 }

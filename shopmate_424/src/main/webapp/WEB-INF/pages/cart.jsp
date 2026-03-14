@@ -4,7 +4,6 @@ pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 
 <html>
-
 <head>
 
 <title>Your Cart</title>
@@ -14,6 +13,7 @@ pageEncoding="UTF-8"%>
 </head>
 
 <body>
+
 <%@ include file="header.jsp" %>
 
 <div class="navbar">
@@ -24,9 +24,12 @@ pageEncoding="UTF-8"%>
 
 <h2 style="text-align:center;">Your Cart</h2>
 
+<form action="/buyProducts" method="post">
+
 <table class="cart-table">
 
 <tr>
+<th>Select</th>
 <th>Product</th>
 <th>Price</th>
 <th>Quantity</th>
@@ -37,11 +40,13 @@ pageEncoding="UTF-8"%>
 <tr>
 
 <td>
+<input type="checkbox" name="cartIds" value="${c.cartId}">
+</td>
+
+<td>
 
 <img src="/images/${c.image}" class="cart-img">
-
 <br>
-
 ${c.name}
 
 </td>
@@ -59,7 +64,14 @@ ${c.qty}
 </c:forEach>
 
 </table>
-<%@ include file="footer.jsp" %>
-</body>
 
+<div class="buy-container">
+<button type="submit" class="buy-btn">Buy Selected</button>
+</div>
+
+</form>
+
+<%@ include file="footer.jsp" %>
+
+</body>
 </html>

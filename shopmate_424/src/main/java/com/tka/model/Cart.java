@@ -19,7 +19,7 @@ public class Cart {
     private int qty;
 
     @ManyToOne
-    @JoinColumn(name = "customer_id")   // foreign key
+    @JoinColumn(name = "customer_id")   // foreign key join with customer table 
     private Customer customer;
 
     public Cart(){}

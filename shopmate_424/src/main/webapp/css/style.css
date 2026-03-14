@@ -354,6 +354,95 @@ font-weight:600;
 .cart-table td:nth-child(3){
 font-weight:500;
 }
+/* BUY BUTTON CONTAINER */
+
+.buy-container{
+text-align:center;
+margin-top:30px;
+}
+
+
+/* BUY BUTTON */
+
+.buy-btn{
+background:#28a745;
+color:white;
+border:none;
+padding:14px 40px;
+font-size:18px;
+border-radius:8px;
+cursor:pointer;
+font-weight:600;
+transition:0.3s;
+box-shadow:0 5px 15px rgba(0,0,0,0.2);
+}
+
+
+/* HOVER EFFECT */
+
+.buy-btn:hover{
+background:#218838;
+transform:translateY(-2px);
+box-shadow:0 8px 18px rgba(0,0,0,0.25);
+}
+
+.page-title{
+text-align:center;
+margin-top:20px;
+}
+
+.bill-box{
+width:60%;
+margin:30px auto;
+background:white;
+padding:30px;
+border-radius:10px;
+box-shadow:0 5px 15px rgba(0,0,0,0.1);
+}
+
+.bill-table{
+width:100%;
+border-collapse:collapse;
+margin-top:20px;
+}
+
+.bill-table th{
+background:#007bff;
+color:white;
+padding:12px;
+}
+
+.bill-table td{
+padding:12px;
+text-align:center;
+border-bottom:1px solid #eee;
+}
+
+.total{
+text-align:right;
+margin-top:20px;
+color:#28a745;
+}
+
+.bill-buttons{
+text-align:center;
+margin-top:25px;
+}
+
+.btn{
+background:#007bff;
+color:white;
+padding:12px 25px;
+border-radius:6px;
+text-decoration:none;
+border:none;
+cursor:pointer;
+margin:5px;
+}
+
+.buy-more{
+background:#28a745;
+}
 /* FOOTER */
 
 .footer{
