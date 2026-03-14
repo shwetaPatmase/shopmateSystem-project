@@ -5,12 +5,14 @@
 <div class="logo">ShopMate</div>
 
 <nav>
-<a href="/home">Home</a>
-<a href="/register">Register</a>
-<a href="/login">Login</a>
+
+<span class="welcome">Welcome ${sessionScope.user.fullName}</span>
+
 <a href="/products">Products</a>
 <a href="/cart">Cart</a>
 <a href="/profile">Profile</a>
+<a href="/logout" class="logout-btn">Logout</a>
+
 </nav>
 
 </header>

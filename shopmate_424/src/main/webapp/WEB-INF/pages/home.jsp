@@ -7,7 +7,7 @@
 <title>Home Page</title>
 </head>
 <body>
-<%@ include file="header.jsp" %>
+<%@ include file="header-home.jsp" %>
 
 <div class="main-content">
 

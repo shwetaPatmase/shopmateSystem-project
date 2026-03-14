@@ -19,7 +19,7 @@ pageEncoding="UTF-8"%>
 <div class="navbar">
 <a href="/products">Products</a>
 <a href="/cart">Cart</a>
-<a href="/login">Logout</a>
+<a href="/logout">Logout</a>
 </div>
 
 <h2 style="text-align:center;">Your Cart</h2>
