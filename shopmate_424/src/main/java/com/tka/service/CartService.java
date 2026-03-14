@@ -14,16 +14,12 @@ public class CartService {
     @Autowired
     CartDao cartDao;
 
-//    public void addProduct(Cart cart){
-//        cartDao.save(cart);
-//    }
-
-    public List<Cart> getCartProducts(){
-        return cartDao.findAll();
+    public List<Cart> getCartProducts(int customerId){
+        return cartDao.findByCustomerId(customerId);
     }
 
-	public void save(Cart cart) {
-		cartDao.save(cart);
-		
-	}
+    public void save(Cart cart) {
+        cartDao.save(cart);
+    }
+
 }

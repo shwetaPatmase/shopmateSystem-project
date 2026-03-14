@@ -8,37 +8,56 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 import com.tka.model.Cart;
+import com.tka.model.Customer;
 import com.tka.service.CartService;
+
+import jakarta.servlet.http.HttpSession;
 
 @Controller
 public class CartController {
 
-	@Autowired
-	CartService cartService;
+    @Autowired
+    CartService cartService;
 
-	@PostMapping("/addtocart")
-	public String addToCart(@RequestParam String name, @RequestParam long price, @RequestParam String image,
-			@RequestParam int qty) {
+    @PostMapping("/addtocart")
+    public String addToCart(@RequestParam String name,
+                            @RequestParam long price,
+                            @RequestParam String image,
+                            @RequestParam int qty,
+                            HttpSession session) {
 
-		Cart cart = new Cart();
+        Customer customer = (Customer) session.getAttribute("user");
 
-		cart.setName(name);
-		cart.setPrice(price);
-		cart.setImage(image);
-		cart.setQty(qty);
+        if(customer == null){
+            return "redirect:/login";
+        }
 
-		cartService.save(cart);
+        Cart cart = new Cart();
+        cart.setName(name);
+        cart.setPrice(price);
+        cart.setImage(image);
+        cart.setQty(qty);
 
-		return "redirect:/cart";
-	}
+        cart.setCustomer(customer);
 
-	@GetMapping("/cart")
-	public String getCart(Model model) {
+        cartService.save(cart);
 
-		List<Cart> cartItems = cartService.getCartProducts();
+        return "redirect:/cart";
+    }
 
-		model.addAttribute("cartItems", cartItems);
+    @GetMapping("/cart")
+    public String getCart(Model model, HttpSession session) {
 
-		return "cart";
-	}
+        Customer customer = (Customer) session.getAttribute("user");
+
+        if(customer == null){
+            return "redirect:/login";
+        }
+
+        List<Cart> cartItems = cartService.getCartProducts(customer.getId());
+
+        model.addAttribute("cartItems", cartItems);
+
+        return "cart";
+    }
 }
