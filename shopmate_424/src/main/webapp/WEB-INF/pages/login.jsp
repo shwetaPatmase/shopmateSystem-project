@@ -12,6 +12,10 @@
 <c:if test="${param.logout == 'success'}">
     <p class="logout-msg">You have logged out successfully! login again</p>
 </c:if>
+<c:if test="${not empty msg}">
+    <p class="error-msg">${msg}</p>
+</c:if>
+
 <div class="main-content">
 
 <div class="form-container">
@@ -19,7 +23,7 @@
 <h2>Login</h2>
 
 <form action="/verify-login" method="post">
-<p style="color:red">${msg}</p>
+
 
 </script>
 

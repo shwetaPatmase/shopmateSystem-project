@@ -36,7 +36,7 @@ public class ShopmateController {
 	@GetMapping("/logout")
 	public String logout(HttpSession session) {
 
-		session.invalidate(); // destroy session
+		session.invalidate(); 
 		System.err.println("successfully logout.. >>>>>login again");
 		return "redirect:/login?logout=success";
 	}
