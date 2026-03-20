@@ -1,4 +1,4 @@
-<%@ include file="/WEB-INF/pages/header-user.jsp" %>
+
 <%@ page language="java" contentType="text/html; charset=UTF-8"%>
 
 <html>
@@ -9,7 +9,7 @@
 
 <body>
 
-<%@ include file="header-user.jsp" %>
+<%@ include file="header.jsp" %>
 
 <div class="form-container">
 
