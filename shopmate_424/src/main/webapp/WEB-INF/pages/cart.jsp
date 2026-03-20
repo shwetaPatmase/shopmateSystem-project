@@ -23,6 +23,9 @@ pageEncoding="UTF-8"%>
 </div>
 
 <h2 style="text-align:center;">Your Cart</h2>
+<c:if test="${not empty msg}">
+    <p class="error-msg">${msg}</p>
+</c:if>
 
 <form action="/buyProducts" method="post">
 

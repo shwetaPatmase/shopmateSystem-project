@@ -25,5 +25,11 @@ public class CartService {
     public List<Cart> getProductsByIds(List<Integer> ids){
         return cartDao.findAllById(ids);
     }
+    
+    public void deleteCartItem(List<Integer> cartIds){
+        for(Integer id : cartIds){
+            cartDao.deleteById(id);
+        }
+    }
 
 }

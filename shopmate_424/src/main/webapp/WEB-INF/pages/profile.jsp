@@ -37,6 +37,7 @@ pageEncoding="UTF-8"%>
 <a href="/products" class="view-products-btn">
 🛒 Explore Products
 </a>
+<a href="/edit-profile" class="edit-btn">Edit Profile</a>
 
 </div>
 

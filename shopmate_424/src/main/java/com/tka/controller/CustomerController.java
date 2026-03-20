@@ -64,6 +64,44 @@ public class CustomerController {
 
 	    return "profile";
 	}
+	
+	@GetMapping("/edit-profile")
+	public String editProfile(HttpSession session, Model model){
+
+	    Customer customer = (Customer) session.getAttribute("user");
+
+	    if(customer == null){
+	        return "redirect:/login";
+	    }
+
+	    model.addAttribute("customer", customer);
+
+	    return "edit-profile";
+	}
+	
+	@PostMapping("/update-profile")
+	public String updateProfile(Customer updatedCustomer,
+	                            HttpSession session,
+	                            RedirectAttributes redirectAttributes){
+
+	    Customer sessionCustomer = (Customer) session.getAttribute("user");
+
+	    if(sessionCustomer == null){
+	        return "redirect:/login";
+	    }
+
+	    // keep same ID
+	    updatedCustomer.setId(sessionCustomer.getId());
+
+	    customerservice.addCustomer(updatedCustomer); // save/update
+
+	    // update session
+	    session.setAttribute("user", updatedCustomer);
+
+	    redirectAttributes.addFlashAttribute("msg", "Profile updated successfully!");
+
+	    return "redirect:/profile";
+	}
 		
 	
 }
