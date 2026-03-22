@@ -28,10 +28,10 @@ public class ShopmateController {
 		return "bill";
 	}
 
-	@GetMapping("/shop")
-	public String getShopPage() {
-		return "shop";
-	}
+//	@GetMapping("/shop")
+//	public String getShopPage() {
+//		return "shop";
+//	}
 
 	@GetMapping("/logout")
 	public String logout(HttpSession session) {
